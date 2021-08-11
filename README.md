@@ -17,7 +17,7 @@ This project utilizes the inquirer, fileSystem, and path node.js modules in orde
 
 ## Deployment
 
-[You can find the deployed app here](https://abhibiju.github.io/ReadMe-Generator)
+[You can find the deployed app here](https://github.com/AbhiBiju/ReadMe-Generator)
 
 ## Installation
 
