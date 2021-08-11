@@ -5,6 +5,7 @@
 ## Table of Contents
 
 - [Description](#description)
+- [Deployment](#deployment)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)

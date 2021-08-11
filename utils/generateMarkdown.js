@@ -64,6 +64,10 @@ function renderTableOfContents(data) {
     table += `- [Description](#description)\n`;
   }
 
+  if (data.deployedLink) {
+    table += `- [Deployment](#deployment)\n`;
+  }
+
   if (data.installation) {
     table += `- [Installation](#installation)\n`;
   }
