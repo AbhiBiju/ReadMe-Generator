@@ -77,11 +77,12 @@ const questions = [
     choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
   },
   {
-    type: "input",
+    type: "suggest",
     name: "contributing",
     message: "What does the user need to know about contributing to the repo?",
-    default:
-      "There are many ways in which you can contribute, beyond writing code. If you have any questions or concerns, please email at abhinavbiju29@gmail.com. If you find any reproduceable problems with the generator, please report/file an issue. Thank you for contributing!",
+    suggestions: [
+      "There are many ways in which you can contribute, beyond writing code. If you have any questions or concerns, please email at . If you find any reproduceable problems with the generator, please report/file an issue. Thank you for contributing!",
+    ],
   },
 ];
 
