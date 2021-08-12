@@ -28,17 +28,23 @@ const questions = [
     default: "Project Title",
   },
   {
-    type: "input",
+    type: "suggest",
     name: "description",
     message: "Please write a short description of your project:",
-    default:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, quod. Quas blanditiis cumque expedita quidem magnam illum cum, maxime consequatur beatae et illo aperiam magni exercitationem a corporis atque? Nam!",
+    suggestions: [
+      "Simple app created with",
+      "Dynamic app created with",
+      "This project utilizes",
+      "In this Challenge, I used to create a Dynamic which can be used to .It utilizes",
+      "In this project, I utilized to",
+      "This app, powered by , aims to , based on",
+    ],
   },
   {
-    type: "list",
-    name: "license",
-    message: "What kind of license should your project have?",
-    choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
+    type: "checkbox",
+    name: "languages",
+    message: "What Technologies/ Languages did you use?",
+    choices: ["HTML", "CSS", "JavaScript", "jQuery", "Node.js", "SQL", "React.js"],
   },
   {
     type: "suggest",
@@ -52,12 +58,23 @@ const questions = [
     message: "What command should be run to install dependencies?",
     default: "npm i",
   },
-  { type: "input", name: "test", message: "What command should be run to run tests?", default: "npm test" },
   {
     type: "input",
     name: "usage",
     message: "What does the user need to know about using the repo?",
     default: "node index.js",
+  },
+  {
+    type: "input",
+    name: "test",
+    message: "What command should be used to run tests?",
+    default: "npm test",
+  },
+  {
+    type: "list",
+    name: "license",
+    message: "What kind of license should your project have?",
+    choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
   },
   {
     type: "input",

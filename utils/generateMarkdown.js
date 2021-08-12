@@ -64,6 +64,10 @@ function renderTableOfContents(data) {
     table += `- [Description](#description)\n`;
   }
 
+  if (data.languages) {
+    table += `- [Languages](#languages)\n`;
+  }
+
   if (data.deployedLink) {
     table += `- [Deployment](#deployment)\n`;
   }
@@ -76,15 +80,22 @@ function renderTableOfContents(data) {
     table += `- [Usage](#usage)\n`;
   }
 
+  if (data.test) {
+    table += `- [Test](#test)\n`;
+  }
+
   if (data.license != "None") {
     table += `- [License](#license)\n`;
   }
 
-  if (data.tests) {
-    table += `- [Tests](#tests)\n`;
+  if (data.contributing) {
+    table += `- [Contributing](#contributing)\n`;
   }
 
-  table += `- [Contributing](#contributing)\n- [Questions](#questions)\n`;
+  if (data.github && data.email) {
+    table += `- [Questions](#questions)\n`;
+  }
+
   return table;
 }
 
@@ -106,20 +117,26 @@ function generateMarkdown(data) {
     text += `## Description\n\n${data.description}\n\n`;
   }
 
+  if (data.languages) {
+    let langList = "";
+    data.languages.forEach((language) => (langList += `- ${language}\n`));
+    text += `## Languages\n\n${langList}\n`;
+  }
+
   if (data.deployedLink) {
-    text += `## Deployment\n\n[You can find the deployed app here](${data.deployedLink})\n\n`;
+    text += `## Deployment\n\nYou Can Find the [Deployed App Here](${data.deployedLink})\n\n`;
   }
 
   if (data.installation) {
-    text += `## Installation\n\nTo install necessary dependencies, run the following command:\n\n\`\`\`md\n${data.installation}\n\`\`\`\n\n`;
+    text += `## Installation\n\nTo install necessary dependencies, use the following command:\n\n\`\`\`md\n${data.installation}\n\`\`\`\n\n`;
   }
 
   if (data.usage) {
-    text += `## Usage\n\nTo use this application, run the following command:\n\n\`\`\`md\n${data.usage}\n\`\`\`\n\n`;
+    text += `## Usage\n\nTo run this application, use the following command:\n\n\`\`\`md\n${data.usage}\n\`\`\`\n\n`;
   }
 
   if (data.test) {
-    text += `## Tests\n\nTo run tests, run the following command:\n\n\`\`\`md\n${data.test}\n\`\`\`\n\n`;
+    text += `## Tests\n\nTo run tests, use the following command:\n\n\`\`\`md\n${data.test}\n\`\`\`\n\n`;
   }
 
   if (data.license != "None") {

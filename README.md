@@ -5,9 +5,11 @@
 ## Table of Contents
 
 - [Description](#description)
+- [Languages](#languages)
 - [Deployment](#deployment)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Test](#test)
 - [License](#license)
 - [Contributing](#contributing)
 - [Questions](#questions)
@@ -16,13 +18,18 @@
 
 This project utilizes the inquirer, fileSystem, and path node.js modules in order to dynamically create a user specified README.md file based on user input. The generated README file follows best practices and is professionally structured, including a Table of contents, License section, a License Badge, as well as a Credits section.
 
+## Languages
+
+- JavaScript
+- Node.js
+
 ## Deployment
 
-[You can find the deployed app here](https://github.com/AbhiBiju/ReadMe-Generator)
+You Can Find the [Deployed App Here](https://abhibiju.github.io/ReadMe-Generator)
 
 ## Installation
 
-To install necessary dependencies, run the following command:
+To install necessary dependencies, use the following command:
 
 ```md
 npm i
@@ -30,7 +37,7 @@ npm i
 
 ## Usage
 
-To use this application, run the following command:
+To run this application, use the following command:
 
 ```md
 node index.js
@@ -38,7 +45,7 @@ node index.js
 
 ## Tests
 
-To run tests, run the following command:
+To run tests, use the following command:
 
 ```md
 npm test
