@@ -43,11 +43,9 @@ const questions = [
     message: "What is your project's name?",
     default: "Project Title",
     validate(value) {
-      if (value === "" || value === " " || value.match(/^(\S)(.*)(\S)$/i) == false) {
+      if (value === "" || value === " " || value.match(/^(\S)(.*)(\S)$/g) == null) {
         return "Please enter a valid title";
       }
-      console.log(value.match(/^(\S)(.*)(\S)$/i));
-      console.log("\nValue: ", value);
       return true;
     },
   },
@@ -63,14 +61,6 @@ const questions = [
       "In this project, I utilized to",
       "This app, powered by , aims to , based on",
     ],
-    validate(value) {
-      const pass = value.match(/^\S+@\S+\.\S+$/i);
-      if (pass) {
-        return true;
-      }
-
-      return "Please enter a valid email";
-    },
   },
   {
     type: "checkbox",
@@ -128,7 +118,7 @@ function init() {
   inquirer.prompt(questions).then((inquirerResponses) => {
     console.log("Generating README...");
     console.log(inquirerResponses);
-    writeToFile("README.md", generateMarkdown({ ...inquirerResponses }));
+    writeToFile("Sample-ReadMe-File.md", generateMarkdown({ ...inquirerResponses }));
   });
 }
 
