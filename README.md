@@ -45,7 +45,7 @@ node index.js
 
 Here is a video walkthrough on how to install and use the app:
 
-https://user-images.githubusercontent.com/83188832/129428430-4803ead7-912b-4ef0-a18a-aa1f15a9beb7.mp4
+<https://user-images.githubusercontent.com/83188832/129428430-4803ead7-912b-4ef0-a18a-aa1f15a9beb7.mp4>
 
 ## Tests
 

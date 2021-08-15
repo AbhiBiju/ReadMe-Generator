@@ -13,6 +13,14 @@ const questions = [
     message: "What is your GitHub username?",
     default: "JohnDoe",
     suggestions: ["AbhiBiju"],
+    validate(value) {
+      const pass = value.match(/^\S+$/i);
+      if (pass) {
+        return true;
+      }
+
+      return "Please enter a valid Github username";
+    },
   },
   {
     type: "suggest",
@@ -20,12 +28,28 @@ const questions = [
     message: "What is your email address?",
     default: "johnDoe@gmail.com",
     suggestions: ["abhinavbiju29@gmail.com"],
+    validate(value) {
+      const pass = value.match(/^\S+@\S+\.\S+$/i);
+      if (pass) {
+        return true;
+      }
+
+      return "Please enter a valid email";
+    },
   },
   {
     type: "input",
     name: "title",
     message: "What is your project's name?",
     default: "Project Title",
+    validate(value) {
+      if (value === "" || value === " " || value.match(/^(\S)(.*)(\S)$/i) == false) {
+        return "Please enter a valid title";
+      }
+      console.log(value.match(/^(\S)(.*)(\S)$/i));
+      console.log("\nValue: ", value);
+      return true;
+    },
   },
   {
     type: "suggest",
@@ -39,6 +63,14 @@ const questions = [
       "In this project, I utilized to",
       "This app, powered by , aims to , based on",
     ],
+    validate(value) {
+      const pass = value.match(/^\S+@\S+\.\S+$/i);
+      if (pass) {
+        return true;
+      }
+
+      return "Please enter a valid email";
+    },
   },
   {
     type: "checkbox",
