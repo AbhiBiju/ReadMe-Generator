@@ -81,7 +81,7 @@ function renderTableOfContents(data) {
   }
 
   if (data.test) {
-    table += `- [Test](#test)\n`;
+    table += `- [Tests](#tests)\n`;
   }
 
   if (data.license != "None") {
